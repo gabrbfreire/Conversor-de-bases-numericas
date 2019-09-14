@@ -5,104 +5,76 @@
     <meta charset="UTF-8">
     <title>Conversor</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <div id="Sidenav" class="sidenav">
-        <a id="de">Base de entrada: </a>
-        <a class="fecharbtn">&times;</a><!--&times é o símbolo do X-->
+        <a class="fecharbtn"><i class="fas fa-times"></i></a>
+        <!--&times é o símbolo do X-->
         <a id="botaoBinario">Binário</a>
-        <a id="botaoDecimal">Decimal</a>
         <a id="botaoOctal">Octal</a>
+        <a id="botaoDecimal">Decimal</a>
         <a id="botaoHexa">Hexadecimal</a>
     </div>
-            
-    <div class="abrirbtn">   
-        <div id="botaoMenu"> 
-            <div class="iconeMenu"></div>
-            <div class="iconeMenu"></div>
-            <div class="iconeMenu"></div> 
+
+    <div class="abrirbtn">
+        <div id="botaoMenu">
+            <i class="fas fa-bars"></i>
         </div>
     </div>
-
-        <div id="main">  
-        <div id="grupoBinario"> 
-            <h3>Binário para Decimal</h3>
-            Binário:
-            <input id="entradaBD" type="text" data-parsley-pattern="[0-1]{1,1000}"><!-- Parâmetros do Parsley para validação-->
+    <div id="main">
+        <h1>Conversor</h1>
+        <div id="grupoBinario">
+            <h3>Binário:</h3>
+            <input id="entrada" type="text" data-parsley-pattern="[0-1]{1,1000}" placeholder="01">
+            <!-- Parâmetros do Parsley para validação-->
             <p id="resultadoBD">Decimal:</p>
 
-            <h3>Binário para Octal</h3>
-            Binário:
-            <input id="entradaBO" type="text"  data-parsley-pattern="[0-1]{1,1000}">
             <p id="resultadoBO">Octal:</p>
 
-            <h3>Binário para Hexadecimal</h3>
-            Binário:
-            <input id="entradaBH" type="text"  data-parsley-pattern="[0-1]{1,1000}">
             <p id="resultadoBH">Hexadecimal:</p>
-        </div> 
+        </div>
 
 
-        <div id="grupoDecimal">  
-            <h3>Decimal para Binário</h3>
-            Decimal:
-            <input id="entradaDB" type="text" data-parsley-pattern="[0-9]{1,1000}">
+        <div id="grupoDecimal">
+            <h3>Decimal:</h3>
+            <input id="entradaD" type="text" data-parsley-pattern="[0-9]{1,1000}" placeholder="0123456789">
             <p id="resultadoDB">Binário:</p>
 
-            <h3>Decimal para Octal</h3>
-            Decimal:
-            <input id="entradaDO" type="text" data-parsley-pattern="[0-9]{1,1000}">
             <p id="resultadoDO">Octal:</p>
 
-            <h3>Decimal para Hexadecimal</h3>
-            Decimal:
-            <input id="entradaDH" type="text" data-parsley-pattern="[0-9]{1,1000}">
             <p id="resultadoDH">Hexadecimal:</p>
         </div>
 
 
-        <div id="grupoOctal"> 
-            <h3>Octal para Binário</h3>
-            Octal:
-            <input id="entradaOB" type="text" data-parsley-pattern="[0-7]{1,1000}">
+        <div id="grupoOctal">
+            <h3>Octal:</h3>
+            <input id="entradaO" type="text" data-parsley-pattern="[0-7]{1,1000}" placeholder="01234567">
             <p id="resultadoOB">Binário:</p>
 
-            <h3>Octal para Decimal</h3>
-            Octal:
-            <input id="entradaOD" type="text" data-parsley-pattern="[0-7]{1,1000}">
             <p id="resultadoOD">Decimal:</p>
 
-            <h3>Octal para Hexadecimal</h3>
-            Octal:
-            <input id="entradaOH" type="text" data-parsley-pattern="[0-7]{1,1000}">
             <p id="resultadoOH">Hexadecimal:</p>
-        </div> 
+        </div>
 
-        
-        <div id="grupoHexa"> 
-            <h3>Hexadecimal para Binário</h3>
-            Hexadecimal:
-            <input id="entradaHB" type="text" data-parsley-pattern="[a-fA-F0-9]{1,1000}">
+
+        <div id="grupoHexa">
+            <h3>Hexadecimal:</h3>
+            <input id="entradaH" type="text" data-parsley-pattern="[a-fA-F0-9]{1,1000}" placeholder="0123456789abcdef">
             <p id="resultadoHB">Binário:</p>
 
-            <h3>Hexadecimal para Decimal</h3>
-            Hexadecimal:
-            <input id="entradaHD" type="text" data-parsley-pattern="[a-fA-F0-9]{1,1000}">
             <p id="resultadoHD">Decimal:</p>
 
-            <h3>Hexadecimal para Octal</h3>
-            Hexadecimal:
-            <input id="entradaHO" type="text" data-parsley-pattern="[a-fA-F0-9]{1,1000}">
             <p id="resultadoHO">Octal:</p>
-        </div> 
-    </div> 
+        </div>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/parsley.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/ff0f4c191d.js"></script>
 </body>
 
 </html>
